@@ -36,6 +36,7 @@
     font-size: 35px;
     font-weight: bold;
     color: #181818;
+    text-align: center;
 } 
 
 .section-description {
@@ -87,7 +88,7 @@ nav ul {
 .banner {
     display: flex;
     justify-content: space-between;
-    margin: 0 38px 0 230px;
+    margin: 0 35px 0 200px;
 }
 
 .banner-greetings {
@@ -106,13 +107,11 @@ nav ul {
 } 
 
 .banner-profile-pic {
-    max-width: 584px;
-    height: 676px;
+    width: 580px;
 } 
 
 .banner-content {
-    width: 585px;
-    height: 356px;
+    max-width: 580px;
 } 
 
 /* main style */
@@ -139,12 +138,12 @@ main section {
 }
 
 .item-description {
-    font-weight: bold;
+    font-weight: 600;
 } 
 
 .about-bg {
     background-color: #ffffff;
-} 
+}
 
 .skills-container {
     display: flex;
@@ -157,13 +156,13 @@ main section {
     border-radius: 5px;
 } 
 
-.skill-description {
+/* .skill-description {
     padding-bottom: 20px;
 } 
 
 .section-description {
     padding-bottom: 50px;
-} 
+}  */
 
 /* resume style */
 .resume-container {
@@ -187,13 +186,13 @@ main section {
     color: #D1D1D1;
 } 
 
-.section-title {
+/* .section-title {
     text-align: center;
     margin-bottom: 90px;
-} 
+}  */
 
 .resume-download-cv {
-    margin: 70px;
+    margin-top: 50px;
 } 
 
 /* footer */
@@ -207,7 +206,9 @@ footer {
     width: 50%;
 } 
 
-footer input[type="text"], footer input[type="email"],footer textarea {
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
     height: 64px;
     border-radius: 5px;
     background-color: white;
@@ -236,9 +237,32 @@ footer input[type="text"], footer input[type="email"],footer textarea {
 @media screen and (max-width: 576px) {
     .skills-container,
     .resume-container,
-    footer, 
+    .banner,
+    footer,
+    nav,
+    nav > ul,
     .about-items {
         flex-direction: column;
+    }
+
+    nav > ul {
+        gap: 20px;
+    } 
+
+    .btn-primary {
+        margin-bottom: 20px;
+    } 
+
+    .banner {
+        margin: 20px;
+    } 
+
+    .banner-profile-pic {
+        width: 100%;
+    } 
+
+    .header {
+        background-image: none;
     }
 
     footer, .about {
@@ -249,7 +273,17 @@ footer input[type="text"], footer input[type="email"],footer textarea {
         width: 100%;
     }
 
-    footer input[type="text"], footer input[type="email"],footer textarea {
+    footer input[type="text"],
+    footer input[type="email"],
+    footer textarea {
         width: calc(100% - 40px);
+    }
+    
+} 
+
+/* tablet specific media query */
+@media screen and (min-width: 576px) and (max-width: 990px) {
+    .banner {
+        flex-direction: column;
     }
 }
