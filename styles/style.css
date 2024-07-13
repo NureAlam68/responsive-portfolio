@@ -168,7 +168,7 @@ main section {
 /* resume style */
 .resume-container {
     display: flex;
-    gap: 50px;
+    gap: 24px;
 } 
 
 .experience-description {
@@ -183,7 +183,7 @@ main section {
 } 
 
 .resume hr {
-    margin: 30px 0;
+    margin: 30px 5px;
     color: #D1D1D1;
 } 
 
@@ -234,7 +234,7 @@ footer input[type="text"], footer input[type="email"],footer textarea {
 } 
 
 @media screen and (max-width: 576px) {
-    .skills-container {
+    .skills-container, .resume-container {
         flex-direction: column;
     }
 }
